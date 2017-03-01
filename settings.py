@@ -8,7 +8,7 @@ class Settings():
 		self.zombie_speed = .5;
 		self.zombie_health = 5;
 		self.squares = {
-			"start_left": 434,
+			"start_left": 428,
 			"start_top": 280,
 			"square_width": 135,
 			"square_height": 120,
@@ -19,4 +19,20 @@ class Settings():
 				640,
 				760
 			]
-		}
+		};
+		self.highlighted_square = 0;
+		self.zombie_in_row = [
+			False,
+			False,
+			False,
+			False,
+			False
+		];
+		self.row_zombies = [
+			0,
+			0,
+			0,
+			0,
+			0
+		];
+

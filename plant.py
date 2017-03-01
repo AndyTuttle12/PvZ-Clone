@@ -8,8 +8,9 @@ class Plant(Sprite):
 		self.image = pygame.image.load('./'+self.image_file);
 		self.image = pygame.transform.scale(self.image, (99,96));
 		self.rect = self.image.get_rect();
-		self.rect.left = self.square.rect.left;
+		self.rect.left = self.square.rect.left + 10;
 		self.rect.top = self.square.rect.top;
+		self.yard_row = self.square.row_number;
 
 	def draw_me(self):
 		self.screen.blit(self.image, self.rect);

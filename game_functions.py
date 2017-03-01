@@ -36,13 +36,11 @@ def update_screen(screen,game_settings,background,zombies,squares,plants,bullets
 		zombie.draw_me();
 	if tick % 30 == 0:
 		zombies.add(Zombie(screen,game_settings));
-		# game_settings.row_zombies[plant.yard_row] += 1;
-		# print game_settings.row_zombies[zombie.yard_row];
 	for plant in plants.sprites():
 		# plant.update_me();
 		plant.draw_me();
 		if tick % 30 == 0:
-			if game_settings.zombie_in_row[plant.yard_row]:
+			if game_settings.zombie_in_row[plant.yard_row] > 0:
 				bullets.add(Bullet(screen,plant));
 			plant_died = groupcollide(plants, zombies, True, False);
 

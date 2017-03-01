@@ -16,7 +16,7 @@ class Zombie(Sprite):
 		self.yard_row = random.randint(0,4);
 		self.rect.centery = game_settings.squares['rows'][self.yard_row];
 		self.rect.right = self.screen_rect.right + 20;
-		game_settings.zombie_in_row[self.yard_row] = True;
+		game_settings.zombie_in_row[self.yard_row] += 1;
 
 		self.x = float(self.rect.x);
 
@@ -29,4 +29,3 @@ class Zombie(Sprite):
 
 	def hit(self, damage):
 		self.health -= damage;
-		

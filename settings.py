@@ -7,6 +7,9 @@ class Settings():
 		self.bg_color = (82,111,53);
 		self.zombie_speed = .5;
 		self.zombie_health = 5;
+		self.game_active = True;
+		self.chosen_plant = 1;
+		self.zombies_killed = 0;
 		self.squares = {
 			"start_left": 428,
 			"start_top": 280,

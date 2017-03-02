@@ -10,5 +10,9 @@ class Gatling(Plant):
 		self.screen = screen;
 		self.square = square;
 		self.name = "gatling";
+		self.can_shoot = True;
+		self.can_make_sun = False;
+		self.sun_speed = 0;
+		self.sun_cost = 250;
 
 		super(Gatling,self).__init__();

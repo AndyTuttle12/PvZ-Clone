@@ -10,6 +10,7 @@ class Settings():
 		self.game_active = True;
 		self.chosen_plant = 1;
 		self.zombies_killed = 0;
+		self.total_sun = 50;
 		self.squares = {
 			"start_left": 428,
 			"start_top": 280,

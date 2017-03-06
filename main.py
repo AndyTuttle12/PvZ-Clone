@@ -15,10 +15,11 @@ pygame.display.set_caption("A PvZ Clone");
 background = Background(game_settings);
 sunflower_icon = Plant_Icon(game_settings,'sunflower-icon.png',1);
 peashooter_icon = Plant_Icon(game_settings,'peashooter-icon.png',2);
-repeater_icon = Plant_Icon(game_settings,'repeater-icon.png',3);
-gatling_icon = Plant_Icon(game_settings,'gatling-icon.png',4);
-wallnut_icon = Plant_Icon(game_settings,'wallnut-icon.png',5);
-icons = [sunflower_icon,peashooter_icon,repeater_icon,gatling_icon,wallnut_icon];
+snowpea_icon = Plant_Icon(game_settings,'snow_pea-icon.png',3);
+repeater_icon = Plant_Icon(game_settings,'repeater-icon.png',4);
+gatling_icon = Plant_Icon(game_settings,'gatling-icon.png',5);
+wallnut_icon = Plant_Icon(game_settings,'wallnut-icon.png',6);
+icons = [sunflower_icon,peashooter_icon,snowpea_icon,repeater_icon,gatling_icon,wallnut_icon];
 
 zombies = Group();
 plants = Group();

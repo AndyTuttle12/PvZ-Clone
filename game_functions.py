@@ -5,6 +5,7 @@ from gatling import Gatling;
 from repeater import Repeater;
 from sunflower import Sunflower;
 from wallnut import Wallnut;
+from snowpea import Snowpea;
 from bullet import Bullet;
 from zombie import Zombie;
 from pygame.sprite import groupcollide;
@@ -35,18 +36,24 @@ def check_events(screen,game_settings,squares,plants,bullets,icons):
 									square.plant_here = True;						
 									game_settings.total_sun -= peashooter.sun_cost;
 							elif(game_settings.chosen_plant == 3):
+								snowpea = Snowpea(screen,square)
+								if game_settings.total_sun >= snowpea.sun_cost:
+									plants.add(snowpea);
+									square.plant_here = True;						
+									game_settings.total_sun -= snowpea.sun_cost;
+							elif(game_settings.chosen_plant == 4):
 								repeater = Repeater(screen,square)
 								if game_settings.total_sun >= repeater.sun_cost:
 									plants.add(repeater);
 									square.plant_here = True;
 									game_settings.total_sun -= repeater.sun_cost;
-							elif(game_settings.chosen_plant == 4):
+							elif(game_settings.chosen_plant == 5):
 								gatling = Gatling(screen,square)
 								if game_settings.total_sun >= gatling.sun_cost:
 									plants.add(gatling);
 									square.plant_here = True;
 									game_settings.total_sun -= gatling.sun_cost;
-							elif(game_settings.chosen_plant == 5):
+							elif(game_settings.chosen_plant == 6):
 								wallnut = Wallnut(screen,square)
 								if game_settings.total_sun >= wallnut.sun_cost:
 									plants.add(wallnut);
